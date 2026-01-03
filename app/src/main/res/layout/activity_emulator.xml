@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmulatorActivity">
+
+    <!-- Emulator SurfaceView -->
+    <SurfaceView
+        android:id="@+id/emulator_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Overlay Virtual Controls -->
+    <RelativeLayout
+        android:id="@+id/virtual_controls_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- D-pad -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_up"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="↑" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_left"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="←" />
+
+                <Button
+                    android:id="@+id/button_down"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="↓" />
+
+                <Button
+                    android:id="@+id/button_right"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="→" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_y"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="Y" />
+
+            <Button
+                android:id="@+id/button_x"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="X" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_select"
+                    android:layout_width="64dp"
+                    android:layout_height="48dp"
+                    android:text="Select" />
+
+                <Button
+                    android:id="@+id/button_start"
+                    android:layout_width="64dp"
+                    android:layout_height="48dp"
+                    android:text="Start" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_b"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="B" />
+
+                <Button
+                    android:id="@+id/button_a"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="A" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

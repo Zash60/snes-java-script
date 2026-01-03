@@ -3,7 +3,10 @@ cmake_minimum_required(VERSION 3.10.2)
 project(snes9x)
 
 # Find all source files
-file(GLOB_RECURSE SOURCES "*.cpp")
+file(GLOB_RECURSE SOURCES "*.cpp" "*.h")
+
+# Exclude included files that are not standalone
+list(FILTER SOURCES EXCLUDE REGEX "oppseudo")
 
 # Add the shared library
 add_library(snes9x SHARED ${SOURCES})

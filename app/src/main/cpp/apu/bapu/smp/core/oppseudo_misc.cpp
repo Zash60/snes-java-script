@@ -1,3 +1,5 @@
+#include "../../port.h"
+
 case 0x00: {
   op_io();
   break;
@@ -50,6 +52,8 @@ case 0xbe: {
   regs.p.z = (regs.B.a == 0);
   break;
 }
+
+default: break;
 
 case 0x60: {
   op_io();

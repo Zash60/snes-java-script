@@ -36,7 +36,7 @@ class EmulatorActivity : AppCompatActivity(), SurfaceHolder.Callback {
     }
 
     private fun setupControls() {
-        val controls = VirtualControls(this, binding.virtualControlsOverlay)
+        val controls = VirtualControls(binding.virtualControlsOverlay)
         controls.setOnInputChangeListener { input ->
             inputState = input
         }

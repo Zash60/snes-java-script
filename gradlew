@@ -142,9 +142,6 @@ setJavaHome() {
 }
 
 # Split up the JVM_OPTS And GRADLE_OPTS values into an array, following the shell quoting and substitution rules
-eval splitJvmOpts() {
-    JVM_OPTS=("$@")
-}
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -155,10 +152,9 @@ if [ -n "$JAVA_HOME" ] ; then
         JAVACMD=$JAVA_HOME/bin/java
     fi
     if [ ! -x "$JAVACMD" ] ; then
-        die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME"
-        ""
-        "Please set the JAVA_HOME variable in your environment to match the"
-        "location of your Java installation."
+        die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
+    Please set the JAVA_HOME variable in your environment to match the
+    location of your Java installation."
     fi
 else
     JAVACMD=java
